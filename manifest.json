@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+
+  "name": "No Intro",
+  "description": "Netflix skip intro and fast forward to next episode.",
+  "version": "0.0.0.3",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "*://www.netflix.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "*://www.netflix.com/*" ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
